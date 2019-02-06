@@ -11,7 +11,7 @@
     <div class="scrollView row flex-row flex-nowrap">
         <% @articles.each do |article| %>
           <div class="whiteList col">
-            <div class="row">
+            <div class="row listHeader">
               <div class="col-xs">
                 <%= link_to edit_article_path(article) do %>
                  <%= image_tag "editIcon.svg", class: "iconNormal adjustIconDown" %>
@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="row">
-              <p class="listBody"><%= article.text.html_safe %></p>
+              <div class="listBody"><%= article.text.html_safe %></div>
             </div>
           </div>
         <% end %>
