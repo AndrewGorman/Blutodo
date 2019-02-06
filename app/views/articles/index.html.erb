@@ -7,7 +7,6 @@
         </h1>
         <% end %>
       <h1 class="col titleLabel">Blu-to-do</h1>
-      <h1 class="col"></h1>
     </div>
     <div class="scrollView row flex-row flex-nowrap">
         <% @articles.each do |article| %>
@@ -15,7 +14,7 @@
             <div class="row">
               <div class="col-xs">
                 <%= link_to edit_article_path(article) do %>
-                 <%= image_tag "editIcon.svg", class: "iconSmall adjustIconDown" %>
+                 <%= image_tag "editIcon.svg", class: "iconNormal adjustIconDown" %>
                 <% end %>
               </div>
               <div class="col centerTitle">
@@ -25,7 +24,7 @@
                 <%= link_to article_path(article),
                         method: :delete,
                         data: { confirm: 'Are you sure?' } do %>
-                 <%= image_tag "deleteIcon.svg", class: "iconSmall adjustIconDown" %>
+                 <%= image_tag "deleteIcon.svg", class: "iconNormal adjustIconDown" %>
                 <% end %>
               </div>
             </div>

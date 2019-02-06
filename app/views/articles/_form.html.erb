@@ -2,7 +2,7 @@
 <%= form_with model: @article, local: true do |form| %>
 
   <% if @article.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2>
         <%= pluralize(@article.errors.count, "error") %> prohibited
         this article from being saved:
@@ -15,19 +15,20 @@
     </div>
   <% end %>
 
-  <p>
+  <div class="editorListTitle">
     <%= form.label :title %><br>
     <%= form.text_field :title %>
-  </p>
+  </div>
 
-  <p>
+  <div class="editorListBody">
     <%= form.label :text %><br>
     <%= form.text_area :text, :class => "tinymce", :rows => 10, :cols => 12 %>
     <%= tinymce %>
-  </p>
+  </div>
 
-  <p>
-    <%= form.submit %>
-  </p>
+  <div class="formSubmitButton">
+    <%= form.submit "Save List" %>
+    <%= link_to 'Cancel', root_path %>
+  </div>
 
 <% end %>

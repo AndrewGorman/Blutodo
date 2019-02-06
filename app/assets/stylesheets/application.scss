@@ -56,7 +56,7 @@ h1{
 }
 
 .headerLabel{
-  margin-left: 1em;
+  margin-left: .1em;
   margin-top: .5em;
   color: #aeaeae;
   text-decoration: none;
@@ -67,17 +67,23 @@ a.headerLabel:hover{
   text-decoration: none;
 }
 
+.headerLabelSmall{
+  margin-top: .8em;
+  margin-left: 1em;
+}
+
 .titleLabel{
   margin-top: .5em;
   color: #aeaeae;
+  text-align: right;
 }
 
-.whiteSidebar{
-  height: 100%;
-  padding-top: 1em;
-  background-color: white;
-  border-right: 2px solid #aeaeae;
-}
+// .whiteSidebar{
+//   height: 100%;
+//   padding-top: 1em;
+//   background-color: white;
+//   border-right: 2px solid #aeaeae;
+// }
 
 .scrollView{
   background: linear-gradient(to top, #0077eb, #389dff);
@@ -89,6 +95,11 @@ a.headerLabel:hover{
   padding-right: 4em;
 }
 
+.gradientBackground{
+    background: linear-gradient(to top, #0077eb, #389dff);
+    height: 90%;
+}
+
 .whiteList{
   margin: 3em 0 4em 4em;
   padding: 1em;
@@ -97,13 +108,13 @@ a.headerLabel:hover{
   border-radius: 25px;
   height: 85%;
   overflow-y: auto;
-  max-width: 30%;
-  min-width: 25%;
+  max-width: 20em;
+  min-width: 20em;
 }
 
 .listTitle{
- font-size: 3em;
- color: #aeaeae;
+ font-size: 1.5em;
+ color: #858585;
 }
 
 .centerTitle{
@@ -121,6 +132,11 @@ a.headerLabel:hover{
   width: 35px;
 }
 
+.iconNormal{
+  height: 35px;
+  width: 35px;
+}
+
 .adjustIconUp{
   margin-top: -8px;
 }
@@ -133,4 +149,65 @@ a.headerLabel:hover{
   min-width: 4em !important;
 }
 
-//Need a media breakpoint for 700px width
+
+//Form css
+
+.editorListTitle{
+  padding: 25px 0 25px 0;
+  margin-left: 3em;
+  color: white;
+}
+
+.editorListBody{
+  padding: 25px 0 25px 0;
+  margin: 0 3em 0 3em;
+  color: white;
+}
+
+.formSubmitButton{
+  border-radius: 5px;
+  margin-left: 3em;
+  color: white;
+}
+
+
+//Media breakpoint 900
+//Min width containers
+  @media screen and (max-width: 900px) {
+    .headerLabel{
+      font-size: 2em;
+      margin-left: 1em;
+      margin-top: .8em;
+    }
+
+    .headerLabelSmall{
+      font-size: 2em;
+      margin-top: .8em;
+      margin-left: 1em;
+    }
+
+    .titleLabel{
+      font-size: 2em;
+      margin-top: .8em;
+    }
+
+  }
+
+  @media screen and (max-width: 500px) {
+    .headerLabel{
+      font-size: 1.5em;
+      margin-left: 0;
+      margin-top: 1.3em;
+    }
+
+    .headerLabelSmall{
+      font-size: 2em;
+      margin-top: .8em;
+      margin-left: 1em;
+    }
+
+    .titleLabel{
+      font-size: 2em;
+      margin-top: .8em;
+    }
+  }
