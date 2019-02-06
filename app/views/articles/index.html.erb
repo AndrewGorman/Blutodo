@@ -1,41 +1,41 @@
 <div class="container">
-  <div class="row">
-    <div class="whiteHeader col">
-      <h1 class="greetingLabel text-center">Blu-to-do</h1>
+  <div class="whiteHeader row">
+      <h1 class="headerLabel col">
+           <%= link_to new_article_path do %>
+              <%= image_tag "addIcon.svg", class: "iconSmall adjustIconUp" %>
+            New List
+        </h1>
+        <% end %>
+      <h1 class="col titleLabel">Blu-to-do</h1>
+      <h1 class="col"></h1>
     </div>
-  </div>
-  <div class="row pageContent">
-    <div class="whiteSidebar col-4">
-          <h1 class="text-center">
-            <%= link_to new_article_path do %>
-               <%= image_tag "addIcon.svg", class: "iconSmall" %>
-            <% end %>
-             Lists</h1>
-    </div>
-    <div class="scrollView col-8 row">
+    <div class="scrollView row flex-row flex-nowrap">
         <% @articles.each do |article| %>
-          <div class="whiteList col-sm">
-            <table>
-              <tr>
-                <td>
-                  <%= link_to edit_article_path(article) do %>
-                   <%= image_tag "editIcon.svg", class: "iconSmall" %>
-                  <% end %>
-
-                <%= article.title %>
-
+          <div class="whiteList col">
+            <div class="row">
+              <div class="col-xs">
+                <%= link_to edit_article_path(article) do %>
+                 <%= image_tag "editIcon.svg", class: "iconSmall adjustIconDown" %>
+                <% end %>
+              </div>
+              <div class="col centerTitle">
+                <h1 class="listTitle"><%= article.title %></h1>
+              </div>
+              <div class="col-xs">
                 <%= link_to article_path(article),
                         method: :delete,
                         data: { confirm: 'Are you sure?' } do %>
-                   <%= image_tag "deleteIcon.svg", class: "iconSmall" %>
-                <% end %></td>
-
-                <td><%= article.text %></td>
-
-              </tr>
-            </table>
+                 <%= image_tag "deleteIcon.svg", class: "iconSmall adjustIconDown" %>
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <p class="listBody"><%= article.text %></p>
+            </div>
           </div>
         <% end %>
-    </div>
+        <div class="endSpacer">
+          <p></p>
+        </div>
   </div>
 </div>

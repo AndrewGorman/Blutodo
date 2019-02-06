@@ -7,8 +7,8 @@ ruby '2.3.7'
 # Custom Gems:
 gem 'normalize-rails'
   # resets all css, effectively a normalize file.
-gem 'bootstrap', '~> 4.0.0'
-  #Implements Bootstrap (mostly for the grid system)
+gem 'bootstrap', '~> 4.1.2'
+  #Implements Bootstrap (for the grid system)
 gem 'jquery-rails'
   #Required for bootstrap
 
