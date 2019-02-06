@@ -22,7 +22,8 @@
 
   <p>
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.text_area :text, :class => "tinymce", :rows => 10, :cols => 12 %>
+    <%= tinymce %>
   </p>
 
   <p>

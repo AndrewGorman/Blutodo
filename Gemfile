@@ -11,7 +11,8 @@ gem 'bootstrap', '~> 4.1.2'
   #Implements Bootstrap (for the grid system)
 gem 'jquery-rails'
   #Required for bootstrap
-
+gem 'tinymce-rails'
+  #Adds wysiwyg editor capabilities
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
