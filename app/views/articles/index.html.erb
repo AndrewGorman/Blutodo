@@ -1,25 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="whiteHeader col">
+      <h1 class="greetingLabel text-center">Blu-to-do</h1>
+    </div>
+  </div>
+  <div class="row pageContent">
+    <div class="whiteSidebar col-4">
+          <h1 class="text-center">
+            <%= link_to new_article_path do %>
+               <%= image_tag "addIcon.svg", class: "iconSmall" %>
+            <% end %>
+             Lists</h1>
+    </div>
+    <div class="scrollView col-8 row">
+        <% @articles.each do |article| %>
+          <div class="whiteList col-sm">
+            <table>
+              <tr>
+                <td>
+                  <%= link_to edit_article_path(article) do %>
+                   <%= image_tag "editIcon.svg", class: "iconSmall" %>
+                  <% end %>
 
-<h1>Listing articles</h1>
+                <%= article.title %>
 
+                <%= link_to article_path(article),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } do %>
+                   <%= image_tag "deleteIcon.svg", class: "iconSmall" %>
+                <% end %></td>
 
-<%= link_to 'New article', new_article_path %>
+                <td><%= article.text %></td>
 
-<table>
-  <tr>
-    <th class="testTitle">Title</th>
-    <th>Text</th>
-    <th></th>
-  </tr>
-
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+              </tr>
+            </table>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>

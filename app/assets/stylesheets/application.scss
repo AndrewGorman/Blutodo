@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require normalize-rails
+ *= require_self
+ *= require_tree .
+ */
+
+@import "bootstrap";
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(fonts/Raleway-Light.ttf) format('truetype');
+}
+
+html,body {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+  color: #aeaeae;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.container{
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  height: 100%;
+}
+
+.row{
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+}
+
+h1{
+  margin: 0;
+}
+
+.whiteHeader{
+  background-color: white;
+  height: 6em;
+  border-bottom: 2px solid #aeaeae;
+}
+
+.greetingLabel{
+  margin-top: .5em;
+  color: #aeaeae;
+}
+
+.pageContent{
+  height: 90%;
+}
+
+.whiteSidebar{
+  height: 100%;
+  padding-top: 1em;
+  background-color: white;
+  border-right: 2px solid #aeaeae;
+}
+
+.scrollView{
+  // background-color: #389dff;
+  // background: linear-gradient(to right, #0077eb to #389dff);
+  background: linear-gradient(to top, #0077eb, #389dff);
+  /* width: 10%; */
+}
+
+.whiteList{
+  margin: 4em 0 4em 4em;
+  padding: 1em;
+  background-color: white;
+  border: 2px solid #aeaeae;
+  border-radius: 25px;
+  max-height: 90%;
+
+}
+
+.listTitle{
+ font-size: 2em;
+ color:pink;
+}
+
+.iconSmall{
+  height: 25px;
+  width: 25px;
+}
