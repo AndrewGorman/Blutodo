@@ -114,9 +114,9 @@ a.headerLabel:hover{
   min-width: 20em;
 }
 
-.listHeader{
-  //position: fixed;
-}
+// .listHeader{
+//   //position: fixed;
+// }
 
 .listTitle{
  font-size: 1.5em;
@@ -215,5 +215,81 @@ a.headerLabel:hover{
     .titleLabel{
       font-size: 2em;
       margin-top: .8em;
+    }
+  }
+
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .whiteHeader{
+      height: 10em;
+    }
+
+    .headerLabel{
+      font-size: 5em;
+      margin-left: 0;
+      margin-top: .4em;
+    }
+
+    .headerLabelSmall{
+      font-size: 2em;
+      margin-top: .8em;
+      margin-left: 1em;
+    }
+
+    .titleLabel{
+      font-size: 5em;
+      margin-top: .4em;
+    }
+
+    .iconSmall{
+      height: 50px;
+      width: 50px;
+    }
+
+    .iconNormal{
+      margin: .5em 0 0 .8em;
+      height: 80px;
+      width: 80px;
+    }
+
+    .listTitle{
+     font-size: 5em;
+    }
+
+    .whiteList{
+      margin: 4em 0 4em 4em;
+      max-width: 80%;
+      min-width: 80%;
+    }
+
+    .listBody{
+      font-size: 3em;
+    }
+  }
+  /* iPads (portrait) ----------- */
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .scrollView{
+      height: 100%;
+    }
+
+    .iconNormal{
+      margin: .5em 0 0 .8em;
+      height: 80px;
+      width: 80px;
+    }
+
+    .listTitle{
+     font-size: 3em;
+    }
+
+    .whiteList{
+      margin: 4em 0 4em 4em;
+      max-width: 80%;
+      min-width: 80%;
+    }
+
+    .listBody{
+      font-size: 3em;
+      padding: 1em;
     }
   }
