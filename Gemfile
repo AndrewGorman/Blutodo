@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
 ruby '2.3.7'
 
 
 # Custom Gems:
 gem 'normalize-rails'
   # resets all css, effectively a normalize file.
-gem 'bootstrap', '~> 4.1.2'
+gem 'bootstrap', '~> 4.3.1'
   #Implements Bootstrap (for the grid system)
 gem 'jquery-rails'
   #Required for bootstrap
@@ -17,7 +18,9 @@ gem 'tinymce-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development # Added development group.
+gem 'pg', group: :production # Added postgres and made it production only.
+gem 'rails_12factor'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
